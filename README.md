@@ -76,8 +76,8 @@ The playbook implements the following tasks:
 
 - Install docker.io - This downloads the docker deb package
 - Install python3-pip - This downloads and installs python3 pip module
-- Install Docker module - This uses the newly installed pythoin3-pip module to install the Docker module
-- Use command module - This increases the virtual memory
+- Install Docker module - This uses the newly installed python3-pip module to install the Docker module
+- Use command module - This increases the virtual memory used on the ELK Stack VM
 - Use sysctl module - This sets the value of the virtual memory to persist through restarts
 - Use docker_container_module - This downloads and installs a docker ELK container
 - Use systemd module - This sets the docker ELK container to start after a restart of the VM
