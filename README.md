@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. 
 
-  - docker_vms.yml[docker_vms.yml](https://github.com/Git-rlowther/CyberSecurity_Coursework/blob/main/Ansible/docker_vms.yml)
+  - [docker_vms.yml](https://github.com/Git-rlowther/CyberSecurity_Coursework/blob/main/Ansible/docker_vms.yml)
   - [Elk_Playbook.yml](https://github.com/Git-rlowther/CyberSecurity_Coursework/blob/main/Ansible/Elk_playbook.yml)
   - [filebeat_webservers.yml](https://github.com/Git-rlowther/CyberSecurity_Coursework/blob/main/Ansible/filebeat_webservers.yml)
   - [metricbeat_webservers.yml](https://github.com/Git-rlowther/CyberSecurity_Coursework/blob/main/Ansible/metricbeat_webservers.yml)
