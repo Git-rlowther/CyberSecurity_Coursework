@@ -1,0 +1,4 @@
+##mkdir ~/research && sudo cp -r /var/log/* /etc/shadow /etc/passwd /etc/hosts ~/research
+##sudo find /home -type f -perm 777 > ~/research/exec_list.txt
+##ls /home > ~/research/users.txt && cat /etc/passwd | awk -F ":" '{if ($3 >= 1000) print $0}' >> ~/research/users.txt
+##ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head > ~/research/top_processes.txt
