@@ -1,0 +1,39 @@
+
+
+
+
+
+Open the Metrics page for the web machine you attacked and answer the following questions:
+
+Which of the VM metrics were affected the most from this traffic?
+Outbound traffic was the most affected. Memory was also greatly affected.
+
+
+Bonus: Notice that your wget loop creates a lot of duplicate files on your jump box.
+
+
+Write a command to delete all of these files at once.
+rm ./*.html*
+
+Find a way to run the wget command without generating these extra files.
+
+
+Look up the flag options for wget and find the flag that lets you choose a location to save the file it downloads.
+-O
+
+Save that file to the Linux directory known as the "void" or the directory that doesn't save anything.
+/dev/null
+
+
+while [ true ]; do wget -O /dev/null 10.0.0.9; done
+
+
+Bonus: Write a nested loop that sends your wget command to all three of your web VMs over and over.
+
+while [ true ];
+do 
+	wget -O /dev/null 10.0.0.9
+    wget -O /dev/null 10.0.0.10
+
+done
+
