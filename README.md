@@ -36,7 +36,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat records the metrics and statistics from the operating system and services running on the server. These metrics can include information on CPU usage, Docker container information, or running services like Apache. 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name                 | Function             | IP Address | Operating System     |
 | -------------------- | -------------------- | ---------- | -------------------- |
@@ -59,12 +59,15 @@ Machines within the network can only be accessed by ssh from Jump-Box-Provisione
 
 A summary of the access policies in place can be found in the table below.
 
-| Name                 | Publicly Accessible | Allowed IP Addresses           | Additional Security                 |
-| -------------------- | ------------------- | ------------------------------ | ----------------------------------- |
-| Jump-Box-Provisioner | Yes- SSH only       | Local host's public IP address | SSH key pair - local host           |
-| ELK-P1               | Yes                 | Local host's public IP address | SSH key pair from ansible container |
-| Web-1                | No                  | 10.0.0.4                       | SSH key pair from ansible container |
-| Web-2                | No                  | 10.0.0.4                       | SSH key pair from ansible container |
+| Name                 | Publicly Accessible | Allowed IP Addresses           | Additional Security                               |
+| -------------------- | ------------------- | ------------------------------ | ------------------------------------------------- |
+| Jump-Box-Provisioner | Yes- SSH only       | Local host's public IP address | Port 22 only, SSH key pair - local host           |
+| ELK-P1               | Yes                 | Local host's public IP address | TCP on port 5601 only                             |
+| ELK-P1               | No                  | 10.0.0.4                       | Port 22 only, SSH key pair from ansible container |
+| Web-1                | No                  | 10.0.0.4                       | Port 22 only, SSH key pair from ansible container |
+| Web-1                | Yes                 | *                              | Port 80 traffic only, managed by load balancer    |
+| Web-2                | No                  | 10.0.0.4                       | Port 22 only, SSH key pair from ansible container |
+| Web-2                | Yes                 | *                              | Port 80 traffic only, managed by load balancer    |
 
 ### Elk Configuration
 
